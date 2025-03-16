@@ -1,0 +1,92 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #4285f4; /* Google Blue */
+  --secondary-color: #f1f1f1;
+  --background-color: #ffffff;
+  --text-color: #333;
+  --border-radius: 12px;
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: var(--secondary-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔹 Universal Styling */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #357ae8;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary-color);
+}
+
+/* 🔹 Responsive Containers */
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: var(--background-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+/* 🔹 Utility Classes */
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+/* 🔹 Mobile-First Design */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
